@@ -1,0 +1,159 @@
+
+.chart {
+	background: rgba(15, 105, 205, .15);
+	width: 400px;
+	height: 375px;
+	margin: 25px 25px;
+	h3 {
+		color: Skyblue;
+		width: 75%;
+		margin: 10px auto;		
+	}
+	img {
+		margin: auto;
+	}
+}
+.hidden {
+	left: 100px;
+}
+.resume, .bio, .contact {
+	width: 1024px;
+	height: 650px;
+	margin: auto;
+	position: absolute;
+	display: none;
+	left: 50%;
+	overflow: auto;
+	transform: translate(-50%);
+	text-decoration: none;
+}
+.bio {
+	display: none;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 100%;
+	margin-top: 5px;
+}
+.resumelink, .biolink, .contactlink {
+	pointer-events: auto;
+}
+.filter {
+	width: 100%;
+	height: auto;
+	color: white;
+	text-align: center;
+	li {
+		list-style-type: none;
+		margin: 10px 15px;
+		font-size: 1.25em;
+		color: white;
+		display: inline-block;
+		transition: color 0.4s;
+		-webkit-transition: color 0.4s;
+		&:hover {
+			color: Dodgerblue;
+			cursor: pointer;
+		}
+		a {
+			color: white;
+			text-decoration: none;
+			transition: color 0.4s;
+			-webkit-transition: color 0.4s;
+			&:hover {
+				color: Dodgerblue;
+				cursor: pointer;
+			}			
+		}
+	}
+}
+.learning, .proficient, .advanced {
+	width: 200px;
+	height: auto;
+	margin: 0 auto;
+	list-style-type: none;
+}
+.advanced li a {
+	color: cyan;
+	text-decoration: underline;
+}
+.learning li a {
+	color: #1a8cff;
+	text-decoration: underline;
+}
+.proficient li a {
+	color: #00bfff;
+	text-decoration: underline;
+}
+.line {
+	width: 675px;
+	height: 2px;
+	background-color: Pink;
+	margin: 15px auto;
+}
+.portfolio {
+	height: auto;
+	width: 100%;
+	overflow: auto;
+	text-align: center;
+	margin: auto;
+	a {
+		color: dodgerblue;
+		text-decoration: none;
+		&:hover {
+			color: purple;
+		}	
+	}
+}
+.portfolio p, h2, h3 {
+	color: white;
+}
+.skillsContainer {
+	width: 200px;
+	height: auto;
+	display: inline-block;
+	margin: 0 auto;
+	li {
+		display: inline-block;
+		padding: 3px;
+		border-radius: 5px;
+		margin: 5px auto 10px;
+		list-style-type: none;		
+	}
+}
+.slideContainer {
+	width: 100%;
+	height: 700px;
+	margin: auto;
+	overflow: auto;
+	display: flex;
+	position: relative;
+	flex-wrap: wrap;
+}
+@media screen and (max-height: 700px) {
+	.slideContainer {
+		width: 100%;
+		height: 500px;
+		margin: auto;
+		overflow: auto;
+		display: flex;
+		position: relative;
+		flex-wrap: wrap;
+	}
+}
+.skillLevel li {
+  display: inline-block;
+  padding: 3px;
+  border-radius: 5px;
+  margin: 5px auto 10px;
+  list-style-type: none;
+}
+.technical {
+	display: flex;
+	flex-wrap: wrap;
+	width: 700px;
+	margin: auto;
+}
+#container {
+	width: 100%;
+	margin: auto;
+}

@@ -1,0 +1,109 @@
+
+.adobe {
+	margin: 20px auto;
+	text-align: center;
+	top: 190px;
+	width: 100%;
+	li {
+		display: inline;
+		list-style-type: none;
+		margin: 5px 50px;
+		font-size: 1.5em;
+		color: Dodgerblue;
+		&:hover {
+			cursor: pointer;
+			color: Skyblue;
+			box-shadow: 0px 0px 20px Cyan;	
+		}	
+	}
+}
+.artwork {
+	width: 100%;
+	height: auto;
+	margin: auto;
+	display: block;
+	img {
+		margin: auto;
+		margin-top: 50px;
+		display: block;	
+		margin-bottom: 150px;
+	}
+}
+.artworksContainer {
+	width: 100%;
+	height: 90%;
+	overflow: auto;
+	margin: auto;
+	margin-top: 20px;
+}
+.comparison {
+	width: 20%;
+	cursor: pointer;
+	z-index: 1000;
+	border: 1px solid blue;
+	margin: auto;
+	height: 300px;
+}
+.graphics {
+	width: 100%;
+	height: auto;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	justify-content: space-around;
+	img {
+		margin: 25px 25px;
+		border: 1px solid black;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+}
+.graphicsBottomLink p, .illustrationBottomLink p{
+	width: 100px;
+	height: 20px;
+	left: 50%;
+	margin: 0;
+	padding: 0;
+	transform: translate(-50%);
+	background-color: Dodgerblue;
+	color: white;
+	position: absolute;
+	bottom: 50px;
+	text-align: center;
+	&:hover {
+		cursor: pointer;
+		color: black;
+	};
+}
+.graphicsBottomLink {
+	left: 500px;
+}
+.topGraphics, .topArtworks {
+	color: white;
+	position: absolute;
+	right: 100px;
+	bottom: 100px;
+	width: 40px;
+	height: 40px;
+	border: 1px solid Cyan;
+	text-align: center;
+	display: none;
+	p {
+		margin: 0;
+		padding: 0;
+	}
+	&:hover {
+		-webkit-box-shadow: 0px 0px 9px 3px rgba(0,133,250,1);
+		-moz-box-shadow: 0px 0px 9px 3px rgba(0,133,250,1);
+		box-shadow: 0px 0px 9px 3px rgba(0,133,250,1);
+		cursor: pointer;
+	};
+}
+#artworksSubContainer, #graphicsSubContainer {
+	width: 100%;
+	height: 690px;
+	overflow: auto;
+	margin: auto;
+}

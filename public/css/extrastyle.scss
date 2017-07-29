@@ -1,0 +1,123 @@
+#container {
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+#mainVideo {
+	margin: auto;
+	display: block;
+	margin-top: 10px;
+}
+.category h2 {
+	color: Skyblue;
+	text-align: center;
+	border-bottom: 2px solid Skyblue;
+	width: 1024px;
+	margin: 10px auto;
+	margin-top: 20px;
+	font-family: arial;
+}
+.cycling {
+	width: 500px;
+	height: 500px;
+	background-color: black;
+	margin: auto;
+}
+.filter {
+	width: 100%;
+	height: 5%;
+	color: white;
+	text-align: center;
+	display: block;
+	li {
+		list-style-type: none;
+		display: inline-block;
+		margin: 10px 15px;
+		transition: color 0.4s;
+		-webkit-transition: color 0.4s;
+		font-size: 1.25em;
+		a {
+			color: Dodgerblue;
+			text-decoration: none;
+			&:hover {
+				color: white;
+			}
+		}
+		li:hover {
+			color: Dodgerblue;
+			cursor: pointer;
+		}
+	}
+}
+.thumbnail {
+	width: 150px;
+	height: 100px;
+	background-color: black;
+	color: Cyan;
+	text-align: center;
+	font-size: 1em;
+	border-radius: 5px;
+	border: 4px solid Dodgerblue;
+	position: absolute;
+	top: 0px;
+	display: none;
+	transition: width .5s, font-size .5s;
+}
+.show {
+	color: red;
+	font-size: 1em;
+	&:hover {
+		cursor: pointer;
+		color: #cc0000;
+	}
+}
+.videoContainer {
+	width: 100%;
+	overflow: auto;
+	margin: auto;
+	margin-top: 20px;
+	display: block;
+}
+.videos {
+	width: 1024px;
+	margin: auto;
+	overflow: auto;
+	&::-webkit-scrollbar-thumb {
+		background-color: Cyan;
+	}
+	ul {
+		display: flex;
+		li {
+			height: 40px;
+			width: 166px;
+			text-align: center;
+			list-style-type: none;
+			color: Skyblue;
+			padding: 2px;
+			transition: background-color 1s, color 1s;
+		}
+	}
+}
+.video-item {
+	border: 2px solid Dodgerblue;
+	margin: 10px 15px;
+}
+.video-item:hover {
+	cursor: pointer;
+	border: 2px solid Cyan;
+}
+.youtubeContainer {
+	display: block;
+	height: 90%;
+	overflow: auto;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+.comicContainer {
+	width: 100%;
+	height: 700px;
+	overflow: auto;
+	margin: 0 auto;
+}

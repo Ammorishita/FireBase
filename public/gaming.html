@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Website Lets Try Again</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/extrastyle.css">
+</head>
+<body>
+
+	<header>
+		<div class="wrapper">
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="comic/4.php">Extra</a></li>
+				</ul>		
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<article>
+			<section id="container">
+				<div class="filter">
+					<li class="youtubeLink current"><a href="gaming.html">Gaming</a></li>
+					<li class="comicLink current"><a href="comic/4.php">Comic</a></li>
+					<li class="artworksLink current"><a href="artworks.html">Artworks</a></li>
+				</div>
+
+				<div class="youtubeContainer">					
+					<iframe id="mainVideo" width="560" height="315" src="https://www.youtube.com/embed/UrDzCpbrXgU" frameborder="20"></iframe>
+					<div class="videoContainer">
+
+						<div class="category">
+							<h2>Warcraft 3 : The Frozen Throne</h2>
+						</div>
+						<div class="videos">
+							<ul data-bind="foreach: FrozenThrone">
+								<div class="video-item" data-bind="click: $root.setVideo">
+				    				<li data-bind= "text: title"></li>
+				    				<img data-bind="attr: {src: img}" width="170" height="90">						
+								</div>	    
+			   				</ul>
+						</div>
+
+						<div class="category">
+							<h2>Warcraft 3 : Reign of Chaos</h2>
+						</div>
+						<div class="videos">
+							<ul data-bind="foreach: ReignofChaos">
+								<div class="video-item" data-bind="click: $root.setVideo">
+				    				<li data-bind= "text: title"></li>
+				    				<img data-bind="attr: {src: img}" height="95">							
+								</div>	    
+			   				</ul>
+						</div>
+
+						<div class="category">
+							<h2>Starcraft II : Legacy of the Void</h2>
+						</div>
+						
+						<div class="videos">
+							<ul data-bind="foreach: Starcraft2">
+								<div class="video-item" data-bind="click: $root.setVideo">
+				    				<li data-bind= "text: title"></li>
+				    				<img data-bind="attr: {src: img}" height="95">							
+								</div>	    
+			   				</ul>
+						</div>
+
+					</div>
+				</div>
+
+			</section>
+		</article>	
+	</main>
+
+	<footer>
+		<p>Alex Morishita</p>
+	</footer>
+	<script src="js/libs/jquery-3.1.0.min.js"></script>
+	<script src="js/libs/knockout.js"></script>
+	<script src="js/extra.js"></script>
+</body>
+</html>

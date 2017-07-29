@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Website Lets Try Again</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/extrastyle.css">
+</head>
+<body>
+<div class="thumbnail">
+	<p>Click graphics to view original image.</p>
+	<p class="show"> Dont show again</p>
+</div>
+	<header>
+		<div class="wrapper">
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="comic/4.php">Extra</a></li>
+				</ul>		
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<article>
+			<section id="container">
+				<div class="filter">
+					<li class="youtubeLink current"><a href="gaming.html">Gaming</a></li>
+					<li class="comicLink current"><a href="comic/4.php">Comic</a></li>
+					<li class="artworksLink current"><a href="artworks.html">Artworks</a></li>
+				</div>
+
+				<div class="artworksContainer" data-bind="visible: artworks">
+					<div class="adobe">
+						<li class="illustrationLink">Illustrations</li>
+						<li class="graphicsLink">Graphics</li>
+					</div>
+
+					<div id="artworksSubContainer" data-bind="visible: illustration">
+						<div class="artwork" data-bind="foreach: Artworks">
+							<img data-bind="attr: {src: img, alt: title}" height="500">
+						</div>
+						<div class="topArtworks">
+							<p>/\</p>
+							<p>Top</p>
+						</div>
+					</div>
+
+					<div id="graphicsSubContainer" data-bind="visible: vectors">
+						<div class="graphics" data-bind="foreach: Graphics">
+							<img class="graphic" data-bind="attr: {src: img, alt: title, height: height}, click: $root.changeImage, event: {mouseover: $root.thumbnail}">
+						</div>
+						<div class="topGraphics">
+							<p>/\</p>
+							<p>Top</p>
+						</div>
+					</div>				
+				</div>
+
+			</section>
+		</article>	
+	</main>
+
+	<footer>
+		<p>Alex Morishita</p>
+	</footer>
+	<link rel="stylesheet" href="css/artworkStyle.css">
+	<script src="js/libs/jquery-3.1.0.min.js"></script>
+	<script src="js/libs/knockout.js"></script>
+	<script src="js/extra.js"></script>
+</body>
+</html>

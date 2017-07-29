@@ -1,0 +1,68 @@
+footer {
+	opacity: 1;
+}
+
+.archives {
+	width: 1024px;
+	margin: auto;
+	margin-top: 25px;
+	text-align: center;
+	color: Cyan;
+	display: none;
+	ul li {
+		color: Dodgerblue;
+		list-style-type: none;
+		&:hover {
+			color: white;
+			cursor: pointer;
+		}
+		a {
+			text-decoration: none;
+			color: Dodgerblue;
+		}
+		a:hover {
+			color: white;
+			text-decoration: none;
+		}
+	}
+}
+.comic {
+	width: 1024px;
+	background-color: white;
+	margin: auto;
+	margin-top: 25px;
+}
+.comicContainer {
+	margin-top: 50px;
+}
+.comicNav {
+	display: block;
+	width: 1024px;
+	margin: auto;
+	a{text-decoration: none}
+	ul {
+		text-align: center;
+		margin-top: 10px;
+	}
+	li {
+		display: inline-block;
+		width: 100px;
+		background-color: Dodgerblue;
+		color: black;
+		border-radius: 3px;
+		margin: 0px 10px;
+		font-size: 18px;
+		&:hover {
+			cursor: pointer;
+			box-shadow: 0px 0px 2px 2px Dodgerblue;
+		}
+		a {
+		 text-decoration: none;
+		 display: block;
+			&:link {color: black;}
+			&:visited {color: black;}
+			&:hover {color: black;}
+			&:active {color: black;}
+		};
+	}	
+}

@@ -1,0 +1,65 @@
+footer {
+  opacity: 1; }
+
+.archives {
+  width: 1024px;
+  margin: auto;
+  margin-top: 25px;
+  text-align: center;
+  color: Cyan;
+  display: none; }
+  .archives ul li {
+    color: Dodgerblue;
+    list-style-type: none; }
+    .archives ul li:hover {
+      color: white;
+      cursor: pointer; }
+    .archives ul li a {
+      text-decoration: none;
+      color: Dodgerblue; }
+    .archives ul li a:hover {
+      color: white;
+      text-decoration: none; }
+
+.comic {
+  width: 1024px;
+  background-color: white;
+  margin: auto;
+  margin-top: 25px; }
+
+.comicContainer {
+  margin-top: 50px; }
+
+.comicNav {
+  display: block;
+  width: 1024px;
+  margin: auto; }
+  .comicNav a {
+    text-decoration: none; }
+  .comicNav ul {
+    text-align: center;
+    margin-top: 10px; }
+  .comicNav li {
+    display: inline-block;
+    width: 100px;
+    background-color: Dodgerblue;
+    color: black;
+    border-radius: 3px;
+    margin: 0px 10px;
+    font-size: 18px; }
+    .comicNav li:hover {
+      cursor: pointer;
+      box-shadow: 0px 0px 2px 2px Dodgerblue; }
+    .comicNav li a {
+      text-decoration: none;
+      display: block; }
+      .comicNav li a:link {
+        color: black; }
+      .comicNav li a:visited {
+        color: black; }
+      .comicNav li a:hover {
+        color: black; }
+      .comicNav li a:active {
+        color: black; }
+
+/*# sourceMappingURL=extraComicStyle.css.map */
