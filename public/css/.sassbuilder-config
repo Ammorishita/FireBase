@@ -1,0 +1,11 @@
+{
+    "project_path": "C:\xampp\htdocs\FireBase Website\",
+	"output_path": "C:\xampp\htdocs\FireBase Website\public\css",
+	"options": {
+		"cache":         true,
+		"debug":         true,
+		"line-comments": true,
+		"line-numbers":  true,
+		"style":         "nested"
+	}
+}

@@ -9,126 +9,21 @@
 	<link rel="stylesheet" href="css/contactstyle.css">
 </head>
 <body>
-
-<div class="loaderContainer">
-	<div class="loader"></div>	
-</div>
-
-	<header>
-		<div class="wrapper">
-			<nav>
-				<ul>
-					<li><a class="nav" href="index.html">Home</a></li>
-					<li><a class="nav" href="about.html">About</a></li>
-					<li><a class="nav" href="projects.html">Projects</a></li>
-					<li><a class="nav" href="comic/4.php">Extra</a></li>
-				</ul>		
-			</nav>
-		</div>
-	</header>
-
+	<nav>
+		<ul>
+			<li class="navigation about">About</li> 
+			<li class="navigation projects">Projects</li> 
+			<li class="navigation extra">Extra</li> 				
+		</ul>
+	</nav>
 	<main>
-		<article>
-			<section id="container">
-				<div class="filter">
-					<li class="biolink">Bio</li>
-					<li class="resumelink">Resume</li>
-					<li class="contactlink">Contact</li>
-				</div>
-				<article class="portfolio">
-					<div class="slideContainer">
-
-						<div class="bio" data-bind="foreach: Charts">
-							<div class="chart">
-								<h3 data-bind="text: title"></h3>
-								<img data-bind="attr: {src: src, alt: title, height: height, width: width}">
-							</div>
-						</div>
-
-						<div class="contact">
-							<form id="ajax-contact" method="post" action="mailer.php">
-							    <div class="field">
-							        <label for="name">Name:</label>
-							        <input type="text" id="name" name="name" required maxlength="45">
-							    </div>
-
-							    <div class="field">
-							        <label for="email">Email:</label>
-							        <input type="email" id="email" name="email" required maxlength="80">
-							    </div>
-
-							    <div class="field">
-							        <label for="message">Message:</label>
-							        <textarea id="message" name="message" required maxlength="400"></textarea>
-							    </div>
-
-							    <div class="field">
-							        <button type="submit">Send</button>
-							    </div>
-							</form>
-							<div id="form-messages">
-								
-							</div>
-						</div>
-
-						<div class="resume">
-							<h3 style="color: Cyan">Education</h3>
-							<p><a href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001?v=fe1">Front-End Web Developer Nanodegree</a></p> 
-							<p><a href="https://www.udacity.com">Udacity</a> | Aug 2016 - Oct 2016</p>
-							<p><a href="http://art.arts.uci.edu/">B.A. Studio Art</a> | <a href="http://sites.uci.edu/elad/minor/">Minor - Digital Arts</a></p>
-							<p><a href="https://uci.edu/"">University of California, Irvine</a> | 2009-2013</p>
-							<hr color="#006bb3" width="500px">
-
-							<h3 style="color: Cyan">Relevant Experience</h3>
-							<p style="font-style: italic;"><strong>Graphic Artist</strong></p>
-							<p><a href="https://www.teamworkathletic.com/taa/home/?_requestid=39104">Teamwork Athletic Apparel</a> | Jan 2014 - June 2017</p> 
-							<p style="font-style: italic;"><strong>Marketing Intern</strong></p>
-							<p><a href="https://www.xcomglobal.com/">XCom Global</a> | Sep 2013 - Feb 2014</p>
-							<hr color="#006bb3" width="500px">
-
-							<h3 style="color: Cyan">Technical Skills</h3>
-							<div class="technical">
-								<div class="skillsContainer">
-									<div class="skillLevel">
-										<li style="background-color: #1a8cff">Learning</li>
-									</div>
-									<div class="learning">
-										<li><a href="http://www.w3schools.com/php/default.asp">PHP</a></li>
-										<li><a href="https://github.com/Ammorishita">Git/Github</a></li>
-										<li><a href="http://knockoutjs.com/">Knockout</a></li>
-										<li><a href="http://sass-lang.com">Sass</a></li>
-									</div>
-								</div>
-
-								<div class="skillsContainer">
-									<div class="skillLevel">
-										<li style="background-color: #00bfff">Proficient</li>
-									</div>
-									<div class="proficient">
-										<li><a href="http://www.w3schools.com/js/default.asp">Javascript</a></li>
-										<li><a href="http://www.w3schools.com/css/default.asp">CSS</a></li>
-										<li><a href="http://www.w3schools.com/html/">HTML</a></li>
-										<li><a href="https://jquery.com/">jQuery</a></li>
-										<li><a href="http://www.adobe.com/products/photoshop.html">Photoshop CC</a></li>
-									</div>
-								</div>
-
-								<div class="skillsContainer">
-									<div class="skillLevel">
-										<li style="background-color: Cyan">Advanced</li>
-									</div>	
-									<div class="advanced">
-										<li><a href="http://www.adobe.com/products/illustrator.html">Illustrator CC</a></li>
-									</div>
-								</div>							
-							</div>
-						</div>
-
-					</div>
-					
-				</article>
-			</section>
-		</article>	
+		<section class="container">
+			<div class="filter">
+				<li class="biolink">Bio</li>
+				<li class="resumelink">Resume</li>
+				<li class="contactlink">Contact</li>
+			</div>	
+		</section>
 	</main>
 
 	<footer>

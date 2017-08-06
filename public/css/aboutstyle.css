@@ -1,3 +1,10 @@
+.bio {
+  display: none;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 5px; }
+
 .chart {
   background: rgba(15, 105, 205, 0.15);
   width: 400px;
@@ -9,6 +16,11 @@
     margin: 10px auto; }
   .chart img {
     margin: auto; }
+
+.container {
+  width: 100%;
+  margin: auto;
+  background-color: blue; }
 
 .hidden {
   left: 100px; }
@@ -23,13 +35,6 @@
   overflow: auto;
   transform: translate(-50%);
   text-decoration: none; }
-
-.bio {
-  display: none;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-top: 5px; }
 
 .resumelink, .biolink, .contactlink {
   pointer-events: auto; }
@@ -66,7 +71,7 @@
   list-style-type: none; }
 
 .advanced li a {
-  color: cyan;
+  color: Cyan;
   text-decoration: underline; }
 
 .learning li a {
@@ -90,7 +95,7 @@
   text-align: center;
   margin: auto; }
   .portfolio a {
-    color: dodgerblue;
+    color: Dodgerblue;
     text-decoration: none; }
     .portfolio a:hover {
       color: purple; }
@@ -139,10 +144,6 @@
   display: flex;
   flex-wrap: wrap;
   width: 700px;
-  margin: auto; }
-
-#container {
-  width: 100%;
   margin: auto; }
 
 /*# sourceMappingURL=aboutstyle.css.map */

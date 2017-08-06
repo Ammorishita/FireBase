@@ -8,22 +8,51 @@
 	<link rel="stylesheet" href="css/indexStyle.css">
 </head>
 <body>
-
-<object id="bike" data="images/Logo.svg" type="image/svg+xml"></object>
+	<div class="redirect"></div>
+	<object class="bike" data="images/Logo.svg" type="image/svg+xml"></object>
 	<main>
-		<article>
-			<section id="container">
+		<article> 
+			<section class="container">
 				<ul>
-					<li class="navigation about">About</li> 
-					<li class="navigation projects">Projects</li> 
-					<li class="navigation extra">Extra</li> 				
+					<li class="nav about">Resume</li>
+					<li class="nav projects">Projects</li> 
+					<li class="nav extra">Extra</li> 				
 				</ul>
+				<div class="content">
+					<div class="resume">
+						<h3>Education</h3>
+						<p class="education"><a href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001?v=fe1">Front-End Web Developer Nanodegree</a></p> 
+						<p class="education"><a href="http://art.arts.uci.edu/">B.A. Studio Art&nbsp;::&nbsp;</a><a href="http://sites.uci.edu/elad/minor/">Minor - Digital Arts</a></p>
+
+						<h3>Relevant Experience</h3>
+						<div class="experienceContainer">
+							<p class="experience">Front End Web Developer</p>
+							<p class="experience">Graphic Artist</p>
+							<p class="experience">Marketing Intern</p>
+						</div>
+						<h3>Technical Skills</h3>
+						<div class="skillLevel">
+							<li class="left">Learning</li>
+							<li class="right">Advanced</li>
+						</div>
+						<div class="technical">
+							<li><a href="http://www.w3schools.com/php/default.asp">PHP</a></li>
+							<li><a href="https://github.com/Ammorishita">Git/Github</a></li>
+							<li><a href="http://knockoutjs.com/">Knockout</a></li>
+							<li><a href="http://sass-lang.com">Sass</a></li>
+							<li><a href="http://www.w3schools.com/js/default.asp">Javascript</a></li>
+							<li><a href="http://www.w3schools.com/css/default.asp">CSS</a></li>
+							<li><a href="http://www.w3schools.com/html/">HTML</a></li>
+							<li><a href="https://jquery.com/">jQuery</a></li>
+							<li><a href="http://www.adobe.com/products/photoshop.html">Photoshop CC</a></li>
+							<li><a class="advanced" href="http://www.adobe.com/products/illustrator.html">Illustrator CC</a></li>
+						</div>
+					</div>							
+				</div>
 			</section>
 		</article>	
 	</main>
 	<script src="js/libs/jquery-3.1.0.min.js" defer="defer"></script>
 	<script src="js/index.js" defer="defer"></script>
-	<script src="js/svg4everybody.js" defer="defer"></script>
-	<script>svg4everybody(); // run it now or whenever you are ready</script>
 </body>
 </html>

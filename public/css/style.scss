@@ -1,109 +1,152 @@
-@font-face {
-	font-family: "League";
-	src: url('league.otf');
-}
-html, body, article { 
-	margin: 0px; 
-	padding: 0px; 
-	border: 0px;
+html, body {
 	background-color: black;
-	height: 100%;
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap; 
-	background-repeat: no-repeat;
 }
-footer {
-	width: 100%;
-	height: 5%;
-	background-color: Dodgerblue;
-	color: black;
-	text-align: center;
+header, footer {
 	opacity: 0;
 }
-header {
-	width: 100%;
-	height: 5%;
-	background-color: black;
-}
-main {
-	width: 100%;
-	height: 90%;
-	background-color: black;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+p,h1,h2,h3,h4,h5 {
+	-webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
 }
 nav {
-ul {
-	width: 700px;
-	height: auto;
-	text-align: center;
-	padding: 0;
-}
-
-}
-
-nav ul li {
-	width: auto;
-	height: auto;;
-	font-size: 2.25em;
-	color: Dodgerblue;
-	list-style-type: none;
 	display: inline-block;
 }
-
-nav ul li a {
-	text-decoration: none;
-	border-bottom: 1px solid Dodgerblue;
-	color: Dodgerblue;
-	font-family: Arial;
-	padding: 0px 2px;
-}
-nav ul li a:hover {
-	color: Cyan;
-	border-bottom: 1px solid Cyan;
-}
 ul {
-	margin: 0;
-	-webkit-padding-start: 0px;
+	-webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
 }
-::-webkit-scrollbar {
-    width: 12px;
+li {
+	list-style-type: none;
+	text-align: center;
+	overflow: hidden;
+	left: 0;
+	position: relative;
+	transition: all .6s ease;
+	-webkit-transition: all .6s ease;
 }
- 
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,55,0,0.3);
+.nav {
+	color: black;
+	background: linear-gradient(to bottom, rgba(180,221,180,1) 0%,rgba(0,255,59,1) 28%,rgba(0,255,59,1) 31%,rgba(0,255,59,1) 66%,rgba(88,229,45,1) 99%);
+	height: 1.5em;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	margin: 15px 0px 0px 0px;
+	opacity: 1;
 }
- 
-::-webkit-scrollbar-thumb {
-    background-color: Dodgerblue;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,55,0.5); 
+.bike {
+	width: 100%;
+	max-height: 150px;
 }
-::-webkit-scrollbar-track-piece  {
-	background-color: black;
+.container {
+	overflow: hidden;
+	position: relative;
 }
-@media screen and (max-width: 700px) {
-	header {
-		height: auto;
+.content {
+	margin: 5px 0px;
+}
+.education {
+	height: 0;
+	width: 80%;
+	float: right;
+	display: inline-block;
+	font-size: 1em;
+	margin: 5px 0px 5px 5px;
+	text-align: center;
+	line-height: 25px;
+	border-style: solid;
+	border-color: transparent transparent Cyan transparent;
+	border-width: 0px #{0}px #{25}px #{25}px;
+}
+$corner-bevel: 25;
+.experience {
+	height: 0;
+	width: 80%;
+	text-align: center;
+	display: inline-block;
+	float: right;
+	line-height: 25px;
+	border-style: solid;
+	margin: 5px 0px 5px 5px;
+	border-color: transparent transparent red transparent;
+	border-width: 0px #{0}px #{25}px #{25}px;
+}
+.left {
+	color: black;
+}
+.redirect {
+	width: 100%;
+	z-index: 1000;
+	height: 150px;
+	position: absolute;
+}
+.resume {
+	color: white;
+	h3 {
+		color: white;
+		height: 36px;
+		font-size: 1.5em;
+		line-height: 1.5em;
+		padding-left: 5px;
+		background-color: #0080ff;
+		margin: 5px auto;
+		opacity: 1;
+		display: inline-block;
+		width: 100%;
+	}	
+	a {
+		text-decoration: none;
+		color: Navy;
 	}
-	nav {
-		ul {
-			width: 100%;
-			height: auto;
-			text-align: center;
-			padding: 0;
-			margin-bottom: 10px;
-			display: inline-block;
-			margin: auto;
-			li {
-				width: 100px;
-				margin: 5px 25px;
-				a {
-					width: 100px;
-				}
-			}
-		}
+}
+.right {
+	float: right;
+}
+.show {
+	height: 0em;
+	margin: 0px auto;
+	opacity: 0;
+	transform: rotateX(180deg);
+}
+.skillLevel {
+	background: linear-gradient(-90deg, #7300e6, White);
+	li {
+		display: inline-block;
+	}
+}
+.technical {
 
-	}
+}
+.technical li {
+	margin: 5px 5px;
+	background-color: #989898;
+}
+$beginner: linear-gradient(-90deg, #7300e6, White);
+$intermediate: linear-gradient(-90deg, #7300e6, White);
+$proficient: linear-gradient(-90deg, #7300e6, White);
+$advanced: linear-gradient(-90deg, #7300e6, White);
+.technical li a {
+	display: block;
+	padding: 5px;
+	text-align: left;
+}
+.beginner {
+	background: $beginner;
+	width: 25%;
+}
+.intermediate {
+	background: $intermediate;
+	width: 44%;
+}
+.proficient {
+	background: $proficient;
+	width: 60%;
+}
+.advanced {
+	background: $advanced;
+	width: 80%;
 }
