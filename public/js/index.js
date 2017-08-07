@@ -84,11 +84,11 @@ let navigation = {
 				let clickedItem = e.target.className;
 				if(clickedItem === 'educationContainer') {
 					educationItems.forEach(function(e) {
-						e.classList.toggle('show');
+						e.classList.toggle('show-subContent');
 					});
 				} else if (clickedItem === 'experienceContainer') {
 					experienceItems.forEach(function(e) {
-						e.classList.toggle('show');
+						e.classList.toggle('show-subContent');
 					});
 				}
 			}

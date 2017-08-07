@@ -39,6 +39,20 @@ li {
   margin: 5px 0px; }
 
 .education {
+  transition: all 600ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+  max-height: 100px; }
+
+.education-content {
+  border-color: transparent transparent Cyan transparent; }
+
+.experience {
+  transition: all 600ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+  max-height: 200px; }
+
+.experience-content {
+  border-color: transparent transparent Deepskyblue transparent; }
+
+.sub-content {
   height: 0;
   width: 80%;
   float: right;
@@ -49,20 +63,6 @@ li {
   line-height: 25px;
   border-style: solid;
   transition: all 600ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
-  border-color: transparent transparent Cyan transparent;
-  border-width: 0px 0px 25px 25px; }
-
-.experience {
-  height: 0;
-  width: 80%;
-  text-align: center;
-  display: inline-block;
-  float: right;
-  line-height: 25px;
-  border-style: solid;
-  margin: 5px 0px 5px 5px;
-  transition: all 600ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
-  border-color: transparent transparent Deepskyblue transparent;
   border-width: 0px 0px 25px 25px; }
 
 .left {
@@ -130,6 +130,12 @@ li {
 
 .show-hide {
   display: none; }
+
+.show-subContent {
+  max-height: 0;
+  margin: 0px auto;
+  opacity: 0;
+  overflow: auto; }
 
 .skillLevel {
   background: linear-gradient(-90deg, #7300e6, White);
