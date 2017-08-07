@@ -55,15 +55,15 @@ let navigation = {
 		let about = document.querySelector('.about');
 		let projects = document.querySelector('.projects');
 		let extra = document.querySelector('.extra');
-		let education = document.querySelector('.educationContainer');
+		let skillItems = document.querySelectorAll('.skills')
 		let educationItems = document.querySelectorAll('.education');
 		let experienceItems = document.querySelectorAll('.experience');
-		resume.addEventListener('click', collapse);
 		navElements.push(about, projects, extra);
 		navElements.forEach(function(e) {
-			e.addEventListener('click', navigate);
+			e.addEventListener('click', navMenu);
 		});
-		function navigate(e) {
+		resume.addEventListener('click', collapse);
+		function navMenu(e) {
 			let currentNav = e.target.className;
 			navElements.forEach(function(a) {
 				if(a.className != currentNav) {
@@ -81,13 +81,17 @@ let navigation = {
 		}
 		function collapse(e) {
 			if (e.target !== e.currentTarget) {
-				let clickedItem = e.target.className;
-				if(clickedItem === 'educationContainer') {
+				let clickedItem = e.target.textContent;
+				if(clickedItem === 'Education') {
 					educationItems.forEach(function(e) {
 						e.classList.toggle('show-subContent');
 					});
-				} else if (clickedItem === 'experienceContainer') {
+				} else if (clickedItem === 'Relevant Experience') {
 					experienceItems.forEach(function(e) {
+						e.classList.toggle('show-subContent');
+					});
+				} else if (clickedItem === 'Technical Skills'){
+					skillItems.forEach(function(e) {
 						e.classList.toggle('show-subContent');
 					});
 				}
