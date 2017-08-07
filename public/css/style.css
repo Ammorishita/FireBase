@@ -25,18 +25,7 @@ li {
   text-align: center;
   overflow: hidden;
   left: 0;
-  position: relative;
-  transition: all .6s ease;
-  -webkit-transition: all .6s ease; }
-
-.nav {
-  color: black;
-  background: linear-gradient(to bottom, #b4ddb4 0%, #00ff3b 28%, #00ff3b 31%, #00ff3b 66%, #58e52d 99%);
-  height: 1.5em;
-  font-size: 1.5em;
-  line-height: 1.5em;
-  margin: 15px 0px 0px 0px;
-  opacity: 1; }
+  position: relative; }
 
 .bike {
   width: 100%;
@@ -59,6 +48,7 @@ li {
   text-align: center;
   line-height: 25px;
   border-style: solid;
+  transition: all 600ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
   border-color: transparent transparent Cyan transparent;
   border-width: 0px 0px 25px 25px; }
 
@@ -71,11 +61,27 @@ li {
   line-height: 25px;
   border-style: solid;
   margin: 5px 0px 5px 5px;
-  border-color: transparent transparent red transparent;
+  transition: all 600ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+  border-color: transparent transparent Deepskyblue transparent;
   border-width: 0px 0px 25px 25px; }
 
 .left {
-  color: black; }
+  display: inline-block; }
+
+.misc {
+  color: white;
+  max-height: 0;
+  overflow: auto;
+  transition: all 600ms cubic-bezier(0.17, 0.04, 0.03, 0.94); }
+
+.nav {
+  color: black;
+  background: linear-gradient(to bottom, #b4ddb4 0%, #00ff3b 28%, #00ff3b 31%, #00ff3b 66%, #58e52d 99%);
+  height: 1.5em;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  margin: 15px 0px 0px 0px;
+  opacity: 1; }
 
 .redirect {
   width: 100%;
@@ -84,7 +90,10 @@ li {
   position: absolute; }
 
 .resume {
-  color: white; }
+  color: white;
+  max-height: 0px;
+  overflow: auto;
+  transition: all 500ms ease; }
   .resume h3 {
     color: white;
     height: 36px;
@@ -95,24 +104,40 @@ li {
     margin: 5px auto;
     opacity: 1;
     display: inline-block;
+    transition: all 900ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
     width: 100%; }
   .resume a {
     text-decoration: none;
     color: Navy; }
 
 .right {
+  display: inline-block;
   float: right; }
 
+.portfolio {
+  color: white;
+  max-height: 0;
+  overflow: auto;
+  transition: all 600ms cubic-bezier(0.17, 0.04, 0.03, 0.94); }
+
 .show {
-  height: 0em;
-  margin: 0px auto;
-  opacity: 0;
-  transform: rotateX(180deg); }
+  -webkit-box-shadow: 0px 0px 16px 2px #28fa41;
+  -moz-box-shadow: 0px 0px 16px 2px #28fa41;
+  box-shadow: 0px 0px 16px 2px #28fa41; }
+
+.show-content {
+  max-height: 900px; }
+
+.show-hide {
+  display: none; }
 
 .skillLevel {
-  background: linear-gradient(-90deg, #7300e6, White); }
-  .skillLevel li {
-    display: inline-block; }
+  background: linear-gradient(-90deg, #7300e6, White);
+  height: 5px;
+  margin: 5px 5px; }
+
+.skillLevel2 {
+  margin: 5px 5px; }
 
 .technical li {
   margin: 5px 5px;
@@ -123,20 +148,7 @@ li {
   padding: 5px;
   text-align: left; }
 
-.beginner {
-  background: linear-gradient(-90deg, #7300e6, White);
-  width: 25%; }
-
-.intermediate {
-  background: linear-gradient(-90deg, #7300e6, White);
-  width: 44%; }
-
-.proficient {
-  background: linear-gradient(-90deg, #7300e6, White);
-  width: 60%; }
-
-.advanced {
-  background: linear-gradient(-90deg, #7300e6, White);
-  width: 80%; }
+.level {
+  background: linear-gradient(-90deg, #7300e6, White); }
 
 /*# sourceMappingURL=style.css.map */

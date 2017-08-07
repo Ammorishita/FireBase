@@ -40,7 +40,7 @@ $(document).click(function(e) {
 });
 let navigation = {
 	init: function() {
-		this.navbar();
+		this.styling();
 		this.home();
 	},
 	home: function() {
@@ -49,35 +49,58 @@ let navigation = {
 			window.location.href = "index.html";
 		});
 	},
-	navbar: function() {
+	styling: function() {
 		let navElements = [];
+		let resume = document.querySelector('.resume');
 		let about = document.querySelector('.about');
 		let projects = document.querySelector('.projects');
 		let extra = document.querySelector('.extra');
+		let education = document.querySelector('.educationContainer');
+		let educationItems = document.querySelectorAll('.education');
+		let experienceItems = document.querySelectorAll('.experience');
+		resume.addEventListener('click', collapse);
 		navElements.push(about, projects, extra);
 		navElements.forEach(function(e) {
 			e.addEventListener('click', navigate);
 		});
 		function navigate(e) {
 			let currentNav = e.target.className;
-			/*if(e.className != currentNav) {
-				let parent = document.getElementById('nav');
-				let navEls = parent.children;
-				navEls.forEach(function() {
-
-				})
-				parent.children[2].classList.toggle('show');
-				setTimeout(function() {
-					parent.children[1].classList.toggle('show');
-				},100)
-			}*/
 			navElements.forEach(function(a) {
 				if(a.className != currentNav) {
+					a.classList.remove('show');
+					let contentName = '.' + a.innerHTML.toLowerCase();
+					let content = document.querySelector(contentName);
+					content.classList.remove('show-content');	
+				} else if (a.className === currentNav) {
 					a.classList.toggle('show');
-					let parent = document.getElementById('nav');
+					let contentName = '.' + a.innerHTML.toLowerCase();
+					let content = document.querySelector(contentName);
+					content.classList.toggle('show-content');					
 				}
 			})
 		}
+		function collapse(e) {
+			if (e.target !== e.currentTarget) {
+				let clickedItem = e.target.className;
+				if(clickedItem === 'educationContainer') {
+					educationItems.forEach(function(e) {
+						e.classList.toggle('show');
+					});
+				} else if (clickedItem === 'experienceContainer') {
+					experienceItems.forEach(function(e) {
+						e.classList.toggle('show');
+					});
+				}
+			}
+			e.stopPropagation();
+		}
+		function skillLevel() {
+			let level = document.querySelectorAll('.level');
+			level.forEach(function(e) {
+				e.style.width = e.dataset.level;
+			})
+		}
+		skillLevel();
 	}	
 }
 navigation.init();
