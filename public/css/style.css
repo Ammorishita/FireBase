@@ -40,7 +40,7 @@ li {
 
 .content-container {
   transition: all 600ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
-  max-height: 500px;
+  max-height: 550px;
   overflow: hidden; }
 
 .education-content {
@@ -96,8 +96,7 @@ li {
   float: right; }
 
 .portfolio {
-  color: white;
-  max-height: 0;
+  max-height: 0px;
   overflow: auto;
   transition: all 600ms cubic-bezier(0.17, 0.04, 0.03, 0.94); }
 

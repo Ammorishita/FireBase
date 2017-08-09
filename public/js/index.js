@@ -51,6 +51,7 @@ let navigation = {
 	},
 	styling: function() {
 		let navElements = [];
+		let portfolio = document.querySelector('.portfolio');
 		let resume = document.querySelector('.resume');
 		let about = document.querySelector('.about');
 		let projects = document.querySelector('.projects');
@@ -58,12 +59,15 @@ let navigation = {
 		let skillItems = document.querySelectorAll('.skills')
 		let educationItems = document.querySelectorAll('.education');
 		let experienceItems = document.querySelectorAll('.experience');
+		let udacityItems = document.querySelectorAll('.udacity-project');
 		navElements.push(about, projects, extra);
 		navElements.forEach(function(e) {
 			e.addEventListener('click', navMenu);
 		});
 		resume.addEventListener('click', collapse);
+		portfolio.addEventListener('click', collapse);
 		function navMenu(e) {
+			//display targeted nav element
 			let currentNav = e.target.className;
 			navElements.forEach(function(a) {
 				if(a.className != currentNav) {
@@ -80,21 +84,11 @@ let navigation = {
 			})
 		}
 		function collapse(e) {
+			//display sub container elements
 			if (e.target !== e.currentTarget) {
 				let clickedItem = e.target.textContent;
-				if(clickedItem === 'Education') {
-					educationItems.forEach(function(e) {
-						e.classList.toggle('show-subContent');
-					});
-				} else if (clickedItem === 'Relevant Experience') {
-					experienceItems.forEach(function(e) {
-						e.classList.toggle('show-subContent');
-					});
-				} else if (clickedItem === 'Technical Skills'){
-					skillItems.forEach(function(e) {
-						e.classList.toggle('show-subContent');
-					});
-				}
+				let currentItem = e.target.nextElementSibling;
+				currentItem.classList.toggle('show-subContent')
 			}
 			e.stopPropagation();
 		}

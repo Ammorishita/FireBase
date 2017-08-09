@@ -1,124 +1,96 @@
-
-.description {
-	width: 95%;
-	height: 80px;
-	display: block;
-	margin: auto;
-	margin-top: 5px;
-	text-decoration: none;
-}
-.filter {
-	width: 100%;
-	opacity: 0;
-	height: auto;
+.desktop-only {
 	color: white;
+	background-color: red;
 	text-align: center;
-	li {
-		list-style-type: none;
-		margin: 10px 25px;
-		display: inline-block;
-		transition: color 0.4s;
-		-webkit-transition: color 0.4s;
-		font-size: 1.25em;
-		a {
-			color: white;
-			text-decoration: none;
-			transition: color 0.4s;
-			-webkit-transition: color 0.4s;
-			&:hover {
-				color: Dodgerblue;
-				cursor: pointer;
-			}
-		}
-	}
-}
-.github {
-	color: blue;
-	background-color: dodgerblue;
-	text-decoration: underline;
-	text-decoration-color: red;
-	display: inline;
-	&:hover {
-		color: white;
-		background-color: purple;
-	};
-}
-.project {
-	width: 500px;
-	height: 435px;
-	text-align: center;
-	margin: auto;
-	margin: 20px 20px;
-	border: 2px solid transparent;
-	transition: 1s;
-	position: relative;
-	&:hover {
-		cursor: pointer;
-		border: 2px solid Dodgerblue;
-		-webkit-box-shadow: 0px 0px 46px 2px rgba(30,143,255,1);
-		-moz-box-shadow: 0px 0px 46px 2px rgba(30,143,255,1);
-		box-shadow: 0px 0px 46px 2px rgba(30,143,255,1);
-		h2 {
-			background-color: Dodgerblue;
-			color:white;
-		}		
-	}
-	h2 {
-		width: 100%;
-		height: 40px;
-		color: Dodgerblue;
-		line-height: 40px;
-		text-align: center;
-		display: block;
-		margin: auto;
-		transition: 1s;
-		z-index: 2;
-	}
-	img {
-		width: 100%;
-		height: 280px;
-		display: block;
-		margin: 0 auto;
-	}
 }
 .portfolio {
-	height: 650px;
-	width: 100%;
+	color: white;
+	max-height: 900;
 	overflow: auto;
-	display: none;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	transition: all 500ms ease;
+	h3 {
+		color: white;
+		font-size: 1.25em;
+		line-height: 1.25em;
+		padding-left: 5px;
+		background-color: #0080ff;
+		margin: 5px auto;
+		opacity: 1;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 300;
+		transition: all 900ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+	}	
 	a {
 		text-decoration: none;
-		color: Dodgerblue;
+		color: Navy;
 	}
 }
-.skillset {
-	width: 500px;
-	height: 30px;
-	margin: auto;
+.project {
+	border: 2px solid White;
+	margin-bottom: 10px;
+}
+.project-description {
+	color: white;
+	text-align: center;
+	font-size: 1.25em;
+	padding: 5px 5px;
+	margin: 5px 5px;
+	background-color: DeepSkyBlue;
+}
+.project-skillset {
+	text-align: center;
 	li {
-		width: auto;
-		background-color: black;
-		color: purple;
-		list-style-type: none;
+		color: white;
 		display: inline-block;
-		margin: 5px;
-		padding: 2px 3px;
-		font-family: Arial;
+		padding: 5px 5px;
+		width: 25%;
+		font-family: 'Roboto', sans-serif;
+		font-weight: 400;
+		background-color: #0033cc;		
 	}
 }
-@media screen and (max-width: 700px) {
-	.project {
-		width: 100%;
-		height: auto;
-	}
-	.skillset {
-		width: 100%;
-		height: auto;
-	}
-	.description {
-		width: 100%;
-		height: auto;
-	}
+.project-thumbnail {
+	width: 100%;
+	background-color: Dodgerblue;
+}
+// =========== Skill Color Code ============ //
+.api {
+	background-color: lime;
+	color: black;
+}
+.css {
+	background-color: Dodgerblue;
+	color: white;
+}
+.git {
+	background-color: #1a1a1a;
+	color: white;
+}
+.html {
+	background-color: orange;
+	color: white;
+}
+.illustrator {
+	background-color: #e68a00;
+	color: yellow;
+}
+.javascript {
+	background-color: yellow;
+	color: black;
+}
+.jQuery {
+	background-color: #0033cc;
+	color: white;
+}
+.knockout {
+	background-color: #cc0000;
+	color: white;
+}
+.photoshop {
+	background-color: #0033cc;
+	color: white;
+}
+.php {
+	background-color: purple;
+	color: white;
 }
