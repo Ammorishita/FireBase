@@ -42,12 +42,15 @@ let navigation = {
 	init: function() {
 		this.styling();
 		this.home();
+		this.mobile();
 	},
 	home: function() {
 		let redirect = document.querySelector('.redirect');
 		redirect.addEventListener('click', function(e) {
 			window.location.href = "index.html";
 		});
+	},
+	mobile: function() {
 	},
 	styling: function() {
 		let navElements = [];
@@ -85,7 +88,7 @@ let navigation = {
 		}
 		function collapse(e) {
 			//display sub container elements
-			if (e.target !== e.currentTarget) {
+			if (e.target !== e.currentTarget && e.target.classList.value === 'title') {
 				let clickedItem = e.target.textContent;
 				let currentItem = e.target.nextElementSibling;
 				currentItem.classList.toggle('show-subContent')
