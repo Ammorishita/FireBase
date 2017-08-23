@@ -1,21 +1,5 @@
 window.onload = function() {
-	nav();
-	function nav() {
-		setTimeout(function() {
-			$('#container > ul > li').css({
-				'display': 'inline-block'
-			});			
-		}, 50);
-	};
-	$('.navigation').fadeIn(1500);
-	$('svg').show();
-	$('path, line, polyline').attr('id', 'first');
-	function svg() {
-		setTimeout(function() {
-			$('#chair').attr('data', 'images/path.svg');
-		},1500)
-	}
-	svg();
+
 };
 $(document).click(function(e) {
 	const x = e.pageX;
@@ -51,50 +35,13 @@ let navigation = {
 		});
 	},
 	mobile: function() {
+		let popup = document.querySelector('.pop-up');
+		let something = [1,2,2];
+		something.forEach(v => {
+			console.log(v);
+		})
 	},
 	styling: function() {
-		let navElements = [];
-		let portfolio = document.querySelector('.portfolio');
-		let resume = document.querySelector('.resume');
-		let about = document.querySelector('.about');
-		let projects = document.querySelector('.projects');
-		let extra = document.querySelector('.extra');
-		let skillItems = document.querySelectorAll('.skills')
-		let educationItems = document.querySelectorAll('.education');
-		let experienceItems = document.querySelectorAll('.experience');
-		let udacityItems = document.querySelectorAll('.udacity-project');
-		navElements.push(about, projects, extra);
-		navElements.forEach(function(e) {
-			e.addEventListener('click', navMenu);
-		});
-		resume.addEventListener('click', collapse);
-		portfolio.addEventListener('click', collapse);
-		function navMenu(e) {
-			//display targeted nav element
-			let currentNav = e.target.className;
-			navElements.forEach(function(a) {
-				if(a.className != currentNav) {
-					a.classList.remove('show');
-					let contentName = '.' + a.innerHTML.toLowerCase();
-					let content = document.querySelector(contentName);
-					content.classList.remove('show-content');	
-				} else if (a.className === currentNav) {
-					a.classList.toggle('show');
-					let contentName = '.' + a.innerHTML.toLowerCase();
-					let content = document.querySelector(contentName);
-					content.classList.toggle('show-content');					
-				}
-			})
-		}
-		function collapse(e) {
-			//display sub container elements
-			if (e.target !== e.currentTarget && e.target.classList.value === 'title') {
-				let clickedItem = e.target.textContent;
-				let currentItem = e.target.nextElementSibling;
-				currentItem.classList.toggle('show-subContent')
-			}
-			e.stopPropagation();
-		}
 		function skillLevel() {
 			let level = document.querySelectorAll('.level');
 			level.forEach(function(e) {

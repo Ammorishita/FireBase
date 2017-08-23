@@ -4,145 +4,42 @@
 	<title>Website Lets Try Again</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+	<link rel="import" href="bower_components/polymer/polymer.html">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/indexStyle.css">
 	<link rel="stylesheet" href="css/projectstyle.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400">
+	<link rel="import" href="src/app-nav.html" >
+	<link rel="import" href="src/app-education.html" >
+	<link rel="import" href="src/app-experience.html" >
+	<link rel="import" href="src/app-skills.html" >
+	<link rel="import" href="src/app-projects.html" >
 </head>
 <body>
-	<div class="redirect"></div>
-	<object class="bike" data="images/Logo.svg" type="image/svg+xml"></object>
 	<main>
 		<article> 
 			<section class="container">
-				<ul>
-					<li class="nav about">Resume</li>
-					<li class="nav projects">Portfolio</li> 
-					<li class="nav extra">Misc</li> 				
-				</ul>
+				<app-nav>
+					<span slot="about"><a class="nav" href="#resume">Resume</a></span>
+					<span slot="projects"><a class="nav" href="#portfolio">Portfolio</a></span>
+					<span slot="extra"><a class="nav" href="#misc">Misc</a></span>
+					<span slot="contact"><a class="nav" href="#contact">Contact</a></span>
+				</app-nav>
 				<div class="content">
-					<div class="resume">
-						<h3 class="title">Education</h3>
-						<div class="content-container education">
-							<p class="sub-content education-content"><a href="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001?v=fe1">Front-End Web Developer Nanodegree</a></p> 
-							<p class="sub-content education-content"><a href="http://art.arts.uci.edu/">B.A. Art&nbsp;::&nbsp;</a><a href="http://sites.uci.edu/elad/minor/">Minor - Digital Arts</a></p>							
-						</div>
-						<h3 class="title">Relevant Experience</h3>
-						<div class="content-container experience">
-							<p class="sub-content experience-content">Front End Web Developer</p>
-							<p class="sub-content experience-content">Graphic Artist</p>
-							<p class="sub-content experience-content">Marketing Intern</p>
-						</div>
-						<h3 class="title">Technical Skills</h3>
-						<div class="content-container skills">
-							<div class="skillLevel">
-							</div>
-							<div class="skillLevel2">
-								<li class="left">Learning</li>
-								<li class="right">Advanced</li>
-							</div>
-							<div class="technical">
-								<li><a class="level" data-level="20%" href="http://www.w3schools.com/php/default.asp">PHP</a></li>
-								<li><a class="level" data-level="28%" href="http://knockoutjs.com/">Knockout.js</a></li>
-								<li><a class="level" data-level="41%" href="https://github.com/Ammorishita">Git/Github</a></li>
-								<li><a class="level" data-level="35%" href="http://sass-lang.com">Sass</a></li>
-								<li><a class="level" data-level="56%" href="http://www.w3schools.com/js/default.asp">Javascript</a></li>
-								<li><a class="level" data-level="62%" href="http://www.w3schools.com/css/default.asp">CSS</a></li>
-								<li><a class="level" data-level="64%" href="http://www.w3schools.com/html/">HTML</a></li>
-								<li><a class="level" data-level="45%" href="https://jquery.com/">jQuery</a></li>
-								<li><a class="level" data-level="62%" href="http://www.adobe.com/products/photoshop.html">Photoshop CC</a></li>
-								<li><a class="level" data-level="85%" href="http://www.adobe.com/products/illustrator.html">Illustrator CC</a></li>
-							</div>
-						</div>
+					<div class="resume" id="resume">
+						<app-education>
+						</app-education>
+						<app-experience>
+						</app-experience>
+						<app-skills>
+						</app-skills>
 					</div>
-					<div class="portfolio">
-						<article class="project">
-							<h3 class="title">Udacity Project - Neighborhood Map</h3>
-							<div class="content-container udacity-project show-subContent">
-								<a class="project-link" href="Projects/NeighborhoodMap/index.html" target="_blank">
-								<img class="project-thumbnail" src="images/NeighboorhoodProject.png">
-								<p class="project-description">A single page web app that displays restaurant locations using google maps api and yelp api data.</p>
-								<div class="project-skillset">
-									<li>Javascript</li>
-									<li>HTML</li>
-									<li>CSS</li>
-									<li>jQuery</li>
-									<li>APIs</li>
-									<li>Knockout</li>							
-								</div>
-								</a>
-							</div>
-						</article>
-						<article class="project">
-							<h3 class="title">Zing Chart - Yelp API</h3>
-							<div class="content-container zingChart-project show-subContent">
-								<a class="project-link" href="Projects/Zingchart/index.html" target="_blank">
-								<img class="project-thumbnail" src="images/ZingChart.png">
-								<p class="project-description">Constructed a simple bar graph using ZingChart that allows for yelp searches and displays review data.</p>
-								<div class="project-skillset">
-									<li>Javascript</li>
-									<li>HTML</li>
-									<li>CSS</li>
-									<li>ZingChart</li>							
-								</div>
-								</a>
-							</div>
-						</article>
-						<article class="project">
-							<h3 class="title">Udacity Project - Arcade Game</h3>
-							<div class="content-container udacity-project show-subContent">
-								<a class="project-link" href="Projects/ArcadeGame/arcade.html" target="_blank">
-								<img class="project-thumbnail" src="images/Arcade.png">
-								<p class="project-description">An arcade game created with HTML5 Canvas.  Contains basic player and enemy functions.</p>
-								<div class="project-skillset">
-									<li>Javascript</li>
-									<li>HTML5</li>
-									<li>CSS</li>
-									<li>jQuery</li>							
-								</div>
-								<div class="mobile-warning">
-									<p class="desktop-only">This project requires a desktop screen size and keyboard input to view functionality.</p>
-								</div>
-								</a>
-							</div>
-						</article>
-						<article class="project">
-							<h3 class="title">Grid-Box</h3>
-							<div class="content-container personal-project show-subContent">
-								<a class="project-link" href="Projects/Box-Shooter/game.html" target="_blank">
-								<img class="project-thumbnail" src="images/GridBox.png">
-								<p class="project-description">A simple top down shooter game.  Collect items, avoid enemies and advance through increasingly difficult levels.</p>
-								<div class="project-skillset">
-									<li>Javascript</li>
-									<li>HTML</li>
-									<li>CSS</li>
-									<li>jQuery</li>							
-								</div>
-								<div class="mobile-warning">
-									<p class="desktop-only">This project requires a desktop screen size and keyboard input to view functionality.</p>
-								</div>
-								</a>
-							</div>
-						</article>
-						<article class="project">
-							<h3 class="title">Traffic Simulation</h3>
-							<div class="content-container personal-project show-subContent">
-								<a class="project-link" href="Projects/Traffic/index.html" target="_blank">
-								<img class="project-thumbnail" src="images/Traffic Preview.png">
-								<p class="project-description">Traffic Simulation implements traffic lights, intersections, turns, and cars in a semi real world situation.</p>
-								<div class="project-skillset">
-									<li>Javascript</li>
-									<li>HTML</li>
-									<li>CSS</li>						
-								</div>
-								<div class="mobile-warning">
-									<p class="desktop-only">This project requires a desktop screen size to view functionality.</p>
-								</div>
-								</a>
-							</div>
-						</article>						
+					<div class="portfolio" id="portfolio">
+						<app-projects>
+						</app-projects>						
 					</div>		
-					<div class="misc">
+					<div class="misc" id="misc">
 						<h1>Extra</h1>
 					</div>					
 				</div>

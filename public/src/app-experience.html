@@ -1,0 +1,90 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+<link rel="import" href="/bower_components/polymer/lib/elements/dom-repeat.html">
+
+<dom-module id="app-experience">
+	<template>
+		<style>
+			h2 {
+				text-align: center;
+			}
+		</style>
+		<h2 on-click="collapse">Experience</h2>
+		<div class="container">
+		<template is="dom-repeat" items="{{education}}">
+			<style>
+				:host {
+					display: block;
+				}
+				p {
+					color: dodgerblue;
+					text-align: center;
+				}
+				a {
+					color: dodgerblue;
+					text-decoration: none;
+				}
+				a:hover {
+					color: purple;
+				}
+				.container {
+					transition: all 0.7s ease;
+					-webkit-transition: all 0.7s ease;
+					max-height: 250px;
+					overflow: auto;
+				}
+				.container-active {
+					max-height: 0px;
+					overflow: hidden;
+				}
+			</style>
+			<div class="title"><p>{{item.title}}</p></div>
+			<div class="location"><p><a href="{{item.url}}">{{item.location}}</a> | <span style="color: white">{{item.date}}</span></p></div>				
+		</template>	
+		</div>	
+	</template>
+</dom-module>
+<script>
+	class Experience extends Polymer.Element {
+		static get is() {
+			return 'app-experience';
+		}
+		static get properties() {
+			return {
+				education: {
+					type: Array,
+					value() {
+						return [
+							{
+								title: 'Front End Web Developer',
+								location: 'PINT, Inc',
+								date: 'June 2017 - Present',
+								url: 'https://www.pint.com'
+							},
+							{
+								title: 'Graphic Artist',
+								location: 'Teamwork Athletic Apparel',
+								date: 'Jan 2014 - June 2017',
+								url: 'https://www.teamworkathletic.com/taa/home/?_requestid=213893'
+							},
+							{
+								title: 'Marketing Intern',
+								location: 'XCom Global',
+								date: 'Sept 2013 - Feb 2014',
+								url: 'https://www.xcomglobal.com/'
+							}
+						]
+					}
+				}
+			}
+		}
+		connectedCallback() {
+			super.connectedCallback();
+		}
+		collapse() {
+			const container = this.shadowRoot.querySelector('.container');
+			container.classList.toggle('container-active');
+		}
+	}
+
+	customElements.define('app-experience', Experience);
+</script>

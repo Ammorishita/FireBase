@@ -1,0 +1,70 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<dom-module id="app-nav">
+	<template>
+		<style>
+			:host {
+				display: block;
+				border: 1px solid lime;
+			}
+			::slotted(*) {
+				color: white;
+			}
+			ul {
+				display: inline-block;
+				margin: 0;
+				justify-content: center;
+				-webkit-padding-start: 0;
+			}
+			ul li {
+				width: 150px;
+				margin: 15px 0px;
+				text-align: center;
+				color: white;
+				list-style-type: none;
+				display: inline-block;
+			}
+			.bike {
+				max-height: 100px;
+				display: inline-block;
+			}
+			.nav {
+				color: black;
+				border: 1px solid Dodgerblue;
+				height: 1.5em;
+				font-size: 1.5em;
+				line-height: 1.5em;
+				margin: 15px 0px 0px 0px;
+				opacity: 1;
+			}
+			.navigation {
+				display: table;
+				margin: auto;
+			}
+			.active {
+				border-bottom: 2px solid Dodgerblue;
+			}
+		</style>
+		<div class="navigation">
+			<object class="bike" data="images/Logo.svg" type="image/svg+xml"></object>
+			<ul>
+				<li class="nav about"><slot name="about"></slot></li>
+				<li class="nav projects"><slot name="projects"></slot></li>
+				<li class="nav extra"><slot name="extra"></slot></li>
+				<li class="nav contact"><slot name="contact"></slot></li>
+			</ul>
+		</div>
+	</template>
+</dom-module>
+<script>
+	class Navigation extends Polymer.Element {
+		static get is() {
+			return 'app-nav';
+		}
+		connectedCallback() {
+			super.connectedCallback();
+		}
+	}
+
+	customElements.define('app-nav', Navigation);
+</script>

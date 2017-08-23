@@ -1,0 +1,134 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+<link rel="import" href="/bower_components/polymer/lib/elements/dom-repeat.html">
+
+<dom-module id="app-projects">
+	<template>
+		<style>
+			h2 {
+				text-align: center;
+			}
+		</style>
+		<h2 on-click="collapse">Projects</h2>
+		<template is="dom-repeat" items="{{projects}}">
+			<style>
+				:host {
+					display: block;
+					text-align: center;
+				}
+				h3 {
+					text-align: center;
+				}
+				li {
+					border: 1px solid white;
+					background-color: Dodgerblue;
+					list-style-type: none;
+					min-width: 50px;
+					margin: 5px auto;
+					padding: 2px 2px;
+					color: black;
+					text-align: center;
+				}
+				p {
+					text-align: center;
+				}
+				.container {
+					transition: all 0.4s ease;
+					-webkit-transition: all 0.4s ease;
+					max-height: 250px;
+					overflow: auto;
+				}
+				.container-active {
+					max-height: 0px;
+					overflow: hidden;
+				}
+				.project-container {
+					border: 1px solid Dodgerblue;
+					display: inline-block;
+					margin: 25px 25px;
+					max-width: 425px;
+				}
+				.skill-container {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-around;
+				}
+				@media screen and (max-width: 500px) {
+					img {
+						display: none;
+					}
+				}
+			</style>
+				<div class="project-container">
+					<h3>{{item.title}}</h3>
+					<img src="{{item.image}}" alt="" width="100%" height="300">
+					<p>{{item.description}}</p>
+					<div class="skill-container">
+					<template is="dom-repeat" items="{{projects.0.skills}}">
+							<li>{{item}}</li>							
+					</template>
+					</div>
+				</div>
+		</template>	
+	</template>
+</dom-module>
+<script>
+	class Projects extends Polymer.Element {
+		static get is() {
+			return 'app-projects';
+		}
+		static get properties() {
+			return {
+				projects: {
+					type: Array,
+					value() {
+						return [
+							{
+								title: 'Udacity Project - Neighboyhood Map',
+								description: 'A single page web app that displays restaurant locations using google maps api and yelp api data.',
+								skills: ['Javascript','HTML','CSS','jQuery','APIs','Knockout.js'],
+								image: 'images/NeighboorhoodProject.png'
+							},
+							{
+								title: 'Zing Chart - Yelp API',
+								description: 'Constructed a simple bar graph using ZingChart that allows for yelp searches and displays review data.',
+								skills: ['Javascript','HTML','CSS','ZingChart'],
+								image: 'images/ZingChart.png'
+							},
+							{
+								title: 'Udacity Project - Arcade Game',
+								description: 'An arcade game created with HTML5 Canvas.  Contains basic player and enemy functions.',
+								skills: ['Javascript','HTML5','CSS','jQuery'],
+								image: 'images/Arcade.png',
+								warning: 'This project requires a desktop screen size and keyboard input to view functionality.'
+							},
+							{
+								title: 'Grid Box',
+								description: 'A top down shooter game.  Collect items, avoid enemies and advance through increasingly difficult levels.',
+								skills: ['Javascript','HTML','CSS','jQuery'],
+								image: 'images/GridBox.png',
+								warning: 'This project requires a desktop screen size and keyboard input to view functionality.'
+							},
+							{
+								title: 'Traffic Simulation',
+								description: 'Traffic Simulation implements traffic lights, intersections, turns, and cars in a semi real world situation.',
+								skills: ['Javascript','HTML','CSS'],
+								image: 'images/Traffic Preview.png',
+								warning: 'This project requires a desktop screen size and keyboard input to view functionality.'
+							},
+						]
+					}
+				}
+			}
+		}
+		connectedCallback() {
+			super.connectedCallback();
+			console.log(this.projects[0].skills.value)
+		}
+		collapse() {
+			const container = this.shadowRoot.querySelector('.container');
+			container.classList.toggle('container-active');
+		}
+	}
+
+	customElements.define('app-projects', Projects);
+</script>
