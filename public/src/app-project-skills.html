@@ -1,0 +1,65 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+<link rel="import" href="/bower_components/polymer/lib/elements/dom-repeat.html">
+
+<dom-module id="app-project-skills">
+	<template>
+		<style>
+			h2 {
+				text-align: center;
+			}
+		</style>
+			<style>
+				:host {
+					display: inline-block;
+				}
+				li {
+					border: 1px solid white;
+					background-color: Dodgerblue;
+					list-style-type: none;
+					min-width: 50px;
+					margin: 5px 2px;
+					padding: 2px 2px;
+					color: black;
+					text-align: center;
+				}
+				p {
+					text-align: center;
+				}
+				.skill-container {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: space-around;
+					margin: 5px auto;
+				}
+			</style>
+
+			<div class="skill-container">
+				<template is="dom-repeat" items="[[technical]]">
+					<li>[[item]]</li>				
+				</template>
+			</div>
+	</template>						
+</dom-module>
+<script>
+	class SkillSet extends Polymer.Element {
+		static get is() {
+			return 'app-project-skills';
+		}
+		static get properties() {
+			return {
+				technical: {
+					type: Array
+				}
+			}
+		}
+		connectedCallback() {
+			super.connectedCallback();
+			this._items();
+		}
+		_items() {
+
+		}
+	}
+
+	customElements.define('app-project-skills', SkillSet);
+</script>

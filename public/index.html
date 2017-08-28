@@ -7,14 +7,15 @@
 	<script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
 	<link rel="import" href="bower_components/polymer/polymer.html">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/indexStyle.css">
-	<link rel="stylesheet" href="css/projectstyle.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400">
-	<link rel="import" href="src/app-nav.html" >
-	<link rel="import" href="src/app-education.html" >
-	<link rel="import" href="src/app-experience.html" >
-	<link rel="import" href="src/app-skills.html" >
-	<link rel="import" href="src/app-projects.html" >
+	<link rel="import" href="src/app-nav.html">
+	<link rel="import" href="src/app-education.html">
+	<link rel="import" href="src/app-experience.html">
+	<link rel="import" href="src/app-skills.html">
+	<link rel="import" href="src/app-projects.html">
+	<link rel="import" href="src/app-footer.html">
+	<link rel="import" href="src/app-contact.html">
+	<link rel="import" href="src/app-project-skills.html">
 </head>
 <body>
 	<main>
@@ -36,17 +37,46 @@
 						</app-skills>
 					</div>
 					<div class="portfolio" id="portfolio">
-						<app-projects>
+						<app-projects title="Udacity Project - Neighboyhood Map" description="A single page web app that displays restaurant locations using google maps api and yelp api data." image="images/NeighboorhoodProject.png" source="/Projects/NeighborhoodMap/index.html">
+							<app-project-skills technical='["Javascript","HTML","CSS","jQuery","Knockout.js", "APIs"]'>
+							</app-project-skills>
+						</app-projects>	
+
+						<app-projects title="Zing Chart - Yelp API" description="Constructed a simple bar graph using ZingChart that allows for yelp searches and displays review data." image="images/ZingChart.png">
+							<app-project-skills technical='["Javascript","HTML","CSS","jQuery","ZingChart"]'>
+							</app-project-skills>
+						</app-projects>	
+
+						<app-projects title="Udacity Project - Arcade Game" description="An arcade game created with HTML5 Canvas.  Contains basic player and enemy functions." image="images/Arcade.png">
+							<app-project-skills technical='["Javascript","HTML5","HTML5 Canvas","jQuery","CSS"]'>
+							</app-project-skills>
+						</app-projects>	
+
+						<app-projects title="Grid Box" description="A top down shooter game.  Collect items, avoid enemies and advance through increasingly difficult levels." image="images/GridBox.png">
+							<app-project-skills technical='["Javascript","HTML","CSS","jQuery"]'>
+							</app-project-skills>
+						</app-projects>
+
+						<app-projects title="Traffic Simulation" description="Traffic Simulation implements traffic lights, intersections, turns, and cars in a semi real world situation." image="images/Traffic Preview.png">
+							<app-project-skills technical='["Javascript","HTML","CSS"]'>
+							</app-project-skills>
 						</app-projects>						
+					</div>
+					<div class="contact" id="contact">
+						<app-contact>
+						</app-contact>
 					</div>		
 					<div class="misc" id="misc">
-						<h1>Extra</h1>
 					</div>					
 				</div>
+				<footer>
+					<app-footer>
+
+					</app-footer>
+				</footer>
 			</section>
 		</article>	
 	</main>
-	<script src="js/libs/jquery-3.1.0.min.js" defer="defer"></script>
 	<script src="js/index.js" defer="defer"></script>
 </body>
 </html>

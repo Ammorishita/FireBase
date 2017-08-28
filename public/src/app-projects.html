@@ -3,16 +3,17 @@
 
 <dom-module id="app-projects">
 	<template>
-		<style>
-			h2 {
-				text-align: center;
-			}
-		</style>
-		<h2 on-click="collapse">Projects</h2>
-		<template is="dom-repeat" items="{{projects}}">
 			<style>
 				:host {
 					display: block;
+					text-align: center;
+					overflow: hidden;
+					color: white;
+				}
+				a {
+					color: white;
+				}
+				h2 {
 					text-align: center;
 				}
 				h3 {
@@ -31,21 +32,12 @@
 				p {
 					text-align: center;
 				}
-				.container {
-					transition: all 0.4s ease;
-					-webkit-transition: all 0.4s ease;
-					max-height: 250px;
-					overflow: auto;
-				}
-				.container-active {
-					max-height: 0px;
-					overflow: hidden;
-				}
 				.project-container {
 					border: 1px solid Dodgerblue;
 					display: inline-block;
 					margin: 25px 25px;
 					max-width: 425px;
+					transition: all .5s ease;
 				}
 				.skill-container {
 					display: flex;
@@ -57,18 +49,36 @@
 						display: none;
 					}
 				}
+				@media screen and (min-width: 800px) {
+					:host {
+						display: inline-block;
+						width: 390px;
+						margin: auto;
+					}
+					.project-container {
+
+					}
+					.project-container:hover {
+						-webkit-box-shadow: 0px 0px 16px 5px rgba(3,116,237,1);
+						-moz-box-shadow: 0px 0px 16px 5px rgba(3,116,237,1);
+						box-shadow: 0px 0px 16px 5px rgba(3,116,237,1);
+						transform: scale(1.02);
+					}
+				}
+				@media screen and (min-width: 1300px) {
+					:host {
+						width: 430px;
+					}
+				}
 			</style>
-				<div class="project-container">
-					<h3>{{item.title}}</h3>
-					<img src="{{item.image}}" alt="" width="100%" height="300">
-					<p>{{item.description}}</p>
-					<div class="skill-container">
-					<template is="dom-repeat" items="{{projects.0.skills}}">
-							<li>{{item}}</li>							
-					</template>
-					</div>
-				</div>
-		</template>	
+			<a href="[[source]]" target="_blank">
+			<div class="project-container">
+				<h3>[[title]]</h3>
+				<img src="[[image]]" alt="" width="100%" height="300">
+				<p>[[description]]</p>
+				<slot></slot>
+			</div>
+			</a>
 	</template>
 </dom-module>
 <script>
@@ -78,55 +88,25 @@
 		}
 		static get properties() {
 			return {
-				projects: {
-					type: Array,
-					value() {
-						return [
-							{
-								title: 'Udacity Project - Neighboyhood Map',
-								description: 'A single page web app that displays restaurant locations using google maps api and yelp api data.',
-								skills: ['Javascript','HTML','CSS','jQuery','APIs','Knockout.js'],
-								image: 'images/NeighboorhoodProject.png'
-							},
-							{
-								title: 'Zing Chart - Yelp API',
-								description: 'Constructed a simple bar graph using ZingChart that allows for yelp searches and displays review data.',
-								skills: ['Javascript','HTML','CSS','ZingChart'],
-								image: 'images/ZingChart.png'
-							},
-							{
-								title: 'Udacity Project - Arcade Game',
-								description: 'An arcade game created with HTML5 Canvas.  Contains basic player and enemy functions.',
-								skills: ['Javascript','HTML5','CSS','jQuery'],
-								image: 'images/Arcade.png',
-								warning: 'This project requires a desktop screen size and keyboard input to view functionality.'
-							},
-							{
-								title: 'Grid Box',
-								description: 'A top down shooter game.  Collect items, avoid enemies and advance through increasingly difficult levels.',
-								skills: ['Javascript','HTML','CSS','jQuery'],
-								image: 'images/GridBox.png',
-								warning: 'This project requires a desktop screen size and keyboard input to view functionality.'
-							},
-							{
-								title: 'Traffic Simulation',
-								description: 'Traffic Simulation implements traffic lights, intersections, turns, and cars in a semi real world situation.',
-								skills: ['Javascript','HTML','CSS'],
-								image: 'images/Traffic Preview.png',
-								warning: 'This project requires a desktop screen size and keyboard input to view functionality.'
-							},
-						]
-					}
+				title: {
+					type: String
+				},
+				description: {
+					type: String
+				},
+				image: {
+					type: String
+				},
+				source: {
+					type: String
 				}
 			}
 		}
 		connectedCallback() {
 			super.connectedCallback();
-			console.log(this.projects[0].skills.value)
+			this._items();
 		}
-		collapse() {
-			const container = this.shadowRoot.querySelector('.container');
-			container.classList.toggle('container-active');
+		_items() {
 		}
 	}
 

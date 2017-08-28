@@ -1,0 +1,29 @@
+<link rel="import" href="/bower_components/polymer/polymer-element.html">
+
+<dom-module id="app-footer">
+	<template>
+		<style>
+			:host {
+				display: block;
+				border-top: 1px solid lime;
+				color: white;
+				text-align: center;
+			}
+		</style>
+		<div class="footer">
+			<p>Alex Morishita &copy;2017</p>
+		</div>
+	</template>
+</dom-module>
+<script>
+	class Footer extends Polymer.Element {
+		static get is() {
+			return 'app-footer';
+		}
+		connectedCallback() {
+			super.connectedCallback();
+		}
+	}
+
+	customElements.define('app-footer', Footer);
+</script>
