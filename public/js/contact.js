@@ -1,51 +1,38 @@
-$(function() {
+var config = {
+	apiKey: "AIzaSyBljfIPsIbSRkqfJY66Tncyg1lqc0y7NZI",
+	authDomain: "my-website-510a0.firebaseapp.com",
+	databaseURL: "https://my-website-510a0.firebaseio.com",
+	projectId: "my-website-510a0",
+	storageBucket: "my-website-510a0.appspot.com",
+	messagingSenderId: "410247763913"
+};
+firebase.initializeApp(config);
 
-	// Get the form.
-	var form = $('#ajax-contact');
+var messageRef = firebase.database().ref('messages');
 
-	// Get the messages div.
-	var formMessages = $('#form-messages');
+document.getElementById('contact').addEventListener('submit', submitForm);
 
-	// Set up an event listener for the contact form.
-	$(form).submit(function(e) {
-		// Stop the browser from submitting the form.
-		e.preventDefault();
+function submitForm(e) {
+	e.preventDefault();
+	var name = getInputVal('name');
+	var email = getInputVal('mail');
+	var message = getInputVal('msg');
+	saveMessage(name, email, message);
 
-		// Serialize the form data.
-		var formData = $(form).serialize();
-
-		// Submit the form using AJAX.
-		$.ajax({
-			type: 'POST',
-			url: $(form).attr('action'),
-			data: formData
-		})
-		.done(function(response) {
-			// Make sure that the formMessages div has the 'success' class.
-			$(formMessages).removeClass('error');
-			$(formMessages).addClass('success');
-
-			// Set the message text.
-			$(formMessages).text('Your message has been delivered!');
-
-			// Clear the form.
-			$('#name').val('');
-			$('#email').val('');
-			$('#message').val('');
-		})
-		.fail(function(data) {
-			// Make sure that the formMessages div has the 'error' class.
-			$(formMessages).removeClass('success');
-			$(formMessages).addClass('error');
-
-			// Set the message text.
-			if (data.responseText !== '') {
-				$(formMessages).text(data.responseText);
-			} else {
-				$(formMessages).text('Oops! An error occured and your message could not be sent.');
-			}
-		});
-
+	document.querySelector('.alert').style.display = 'block';
+	setTimeout(function() {
+		document.querySelector('.alert').style.display = 'none';
+	},3000)
+	document.getElementById('contact').reset();
+}
+function getInputVal(id) {
+	return document.getElementById(id).value;
+}
+function saveMessage(name, email, message) {
+	var newMessageRef = messageRef.push();
+	newMessageRef.set({
+		name: name,
+		email: email,
+		message: message
 	});
-
-});
+}

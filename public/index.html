@@ -16,6 +16,8 @@
 	<link rel="import" href="src/app-footer.html">
 	<link rel="import" href="src/app-contact.html">
 	<link rel="import" href="src/app-project-skills.html">
+	<link rel="import" href="src/app-carousel.html">
+	<link rel="import" href="src/carousel-item.html">
 </head>
 <body>
 	<main>
@@ -34,6 +36,17 @@
 						<app-experience>
 						</app-experience>
 						<app-skills>
+							<li>Photoshop</li>
+							<li>Illustrator</li>
+							<li>PHP</li>
+							<li>jQuery</li>
+							<li>Javascript</li>
+							<li>CSS</li>
+							<li>HTML</li>
+							<li>SASS</li>
+							<li>Git/Github</li>
+							<li>Knockout.js</li>
+							<li>Polymer</li>
 						</app-skills>
 					</div>
 					<div class="portfolio" id="portfolio">
@@ -42,29 +55,45 @@
 							</app-project-skills>
 						</app-projects>	
 
-						<app-projects title="Zing Chart - Yelp API" description="Constructed a simple bar graph using ZingChart that allows for yelp searches and displays review data." image="images/ZingChart.png">
+						<app-projects title="Zing Chart - Yelp API" description="Constructed a simple bar graph using ZingChart that allows for yelp searches and displays review data." image="images/ZingChart.png" source="/Projects/Zingchart/index.html">
 							<app-project-skills technical='["Javascript","HTML","CSS","jQuery","ZingChart"]'>
 							</app-project-skills>
 						</app-projects>	
 
-						<app-projects title="Udacity Project - Arcade Game" description="An arcade game created with HTML5 Canvas.  Contains basic player and enemy functions." image="images/Arcade.png">
+						<app-projects title="Udacity Project - Arcade Game" description="An arcade game created with HTML5 Canvas.  Contains basic player and enemy functions." image="images/Arcade.png" source="/Projects/Arcadegame/index.html">
 							<app-project-skills technical='["Javascript","HTML5","HTML5 Canvas","jQuery","CSS"]'>
 							</app-project-skills>
 						</app-projects>	
 
-						<app-projects title="Grid Box" description="A top down shooter game.  Collect items, avoid enemies and advance through increasingly difficult levels." image="images/GridBox.png">
+						<app-projects title="Grid Box" description="A top down shooter game that incorporates items, levels and enemies." image="images/GridBox.png" source="Projects/Box-Shooter/game.html">
 							<app-project-skills technical='["Javascript","HTML","CSS","jQuery"]'>
 							</app-project-skills>
 						</app-projects>
 
-						<app-projects title="Traffic Simulation" description="Traffic Simulation implements traffic lights, intersections, turns, and cars in a semi real world situation." image="images/Traffic Preview.png">
+						<app-projects title="Traffic Simulation" description="Traffic Simulation implements traffic lights, intersections, turns, and cars in a semi real world situation." image="images/Traffic Preview.png" source="/Projects/Traffic/index.html">
 							<app-project-skills technical='["Javascript","HTML","CSS"]'>
 							</app-project-skills>
 						</app-projects>						
 					</div>
-					<div class="contact" id="contact">
-						<app-contact>
-						</app-contact>
+					<div class="contact">
+						<div class="alert">Your message has been sent.</div>
+						<form id="contact">
+						    <div>
+						        <label for="name">Name:</label>
+						        <input type="text" id="name" name="user_name" required>
+						    </div>
+						    <div>
+						        <label for="mail">E-mail:</label>
+						        <input type="email" id="mail" name="user_mail" required>
+						    </div>
+						    <div>
+						        <label for="msg">Message:</label>
+						        <textarea id="msg" name="message"></textarea>
+						    </div>
+							<div class="button">
+							  <button type="submit">Send your message</button>
+							</div>
+						</form>
 					</div>		
 					<div class="misc" id="misc">
 					</div>					
@@ -77,6 +106,8 @@
 			</section>
 		</article>	
 	</main>
+	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
 	<script src="js/index.js" defer="defer"></script>
+	<script src="js/contact.js"></script>
 </body>
 </html>
