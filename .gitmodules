@@ -1,0 +1,12 @@
+[submodule "Arcade-Game"]
+	path = Arcade-Game
+	url = https://github.com/Ammorishita/Arcade-Game.git
+[submodule "testing"]
+	path = testing
+	url = https://github.com/Ammorishita/Arcade-Game.git
+[submodule "public/Portfolio"]
+	path = public/Portfolio
+	url = https://github.com/Ammorishita/Arcade-Game.git
+[submodule "public/Arcade-Game"]
+	path = public/Arcade-Game
+	url = https://github.com/Ammorishita/Arcade-Game.git
