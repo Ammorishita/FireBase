@@ -18,6 +18,7 @@ function submitForm(e) {
 	var email = getInputVal('mail');
 	var message = getInputVal('msg');
 	saveMessage(name, email, message);
+	192.168.56.1
 
 	document.querySelector('.alert').style.display = 'block';
 	setTimeout(function() {

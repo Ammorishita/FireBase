@@ -10,3 +10,6 @@
 [submodule "public/Arcade-Game"]
 	path = public/Arcade-Game
 	url = https://github.com/Ammorishita/Arcade-Game.git
+[submodule "public/--force"]
+	path = public/--force
+	url = https://github.com/Ammorishita/Arcade-Game.git
